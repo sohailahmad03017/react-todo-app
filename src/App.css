@@ -1,38 +1,137 @@
-.App {
+* {
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBox {
+  width: 50vw;
+  height: 90vh;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 5px 10px 10px gray;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dataBox {
+  margin: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputBox {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.inputStyling {
+  width: 77%;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 1px solid gray;
+}
+
+.addBtn {
+  width: 20%;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 15px;
+  margin-left: 3%;
+  background-color: green;
+  border: none;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.addBtn:hover {
+  opacity: 0.9;
+  transition: 0.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.delAllBtn {
+  font-size: 1rem;
+  padding: 7px 15px;
+  border-radius: 15px;
+  margin-left: 3%;
+  background-color: red;
+  margin: 20px auto;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.delAllBtn:hover {
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+.itemsBox {
+  margin: 30px 0px;
+}
+
+.item {
+  background-color: black;
+  margin: 13px 0px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.green {
+  background-color: lightgreen;
+  color: black;
+}
+
+.textStyle {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+  margin: 0px 8px;
+}
+
+.bgRed {
+  color: red;
+}
+
+.bgBlue {
+  color: blue;
+}
+
+@media screen and (max-width:800px) {
+  .mainBox {
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .delAllBtn .addBtn {
+    font-size: 0.7rem;
   }
 }
